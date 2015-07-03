@@ -1,0 +1,20 @@
+{
+  "name": "extplug-chat-markup",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "ExtPlug plugin that applies some markdown/slack/reddit-like markup to chat messages.",
+  "keywords": [
+    "extplug-plugin"
+  ],
+  "devDependencies": {
+    "deps": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.1.0",
+    "mkdirp": "^0.5.1",
+    "requirejs": "^2.1.18",
+    "run-sequence": "^1.1.1"
+  },
+  "scripts": {
+    "build": "gulp build"
+  }
+}
