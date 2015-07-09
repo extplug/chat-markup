@@ -5,6 +5,8 @@ define('extplug/chat-markup/main',['require','exports','module','extplug/Plugin'
   var Plugin = require('extplug/Plugin');
   var Events = require('plug/core/Events');
 
+  var MARKUP_TYPES = ['message', 'emote', 'mention'];
+
   function Token(type, text) {
     this.type = type;
     this.text = text;
@@ -26,7 +28,9 @@ define('extplug/chat-markup/main',['require','exports','module','extplug/Plugin'
     },
 
     onMessage: function onMessage(msg) {
-      msg.message = this.transform(msg.message);
+      if (MARKUP_TYPES.indexOf(msg.type) !== -1) {
+        msg.message = this.transform(msg.message);
+      }
     },
 
     // we use a tokenizer instead of simple regexes, so we can easily
