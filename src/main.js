@@ -3,6 +3,8 @@ define(function (require, exports, module) {
   const Plugin = require('extplug/Plugin')
   const Events = require('plug/core/Events')
 
+  const MARKUP_TYPES = [ 'message', 'emote', 'mention' ]
+
   function Token(type, text) {
     this.type = type
     this.text = text
@@ -25,7 +27,9 @@ define(function (require, exports, module) {
     },
 
     onMessage(msg) {
-      msg.message = this.transform(msg.message)
+      if (MARKUP_TYPES.indexOf(msg.type) !== -1) {
+        msg.message = this.transform(msg.message)
+      }
     },
 
     // we use a tokenizer instead of simple regexes, so we can easily
