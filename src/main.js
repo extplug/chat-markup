@@ -15,15 +15,12 @@ define(function (require, exports, module) {
     description: 'Applies some markdown/slack/reddit-like markup to ' +
                  'chat messages: _italic_, *bold*, ~strike~, `code`.',
 
-    enable() {
-      Events.on('chat:beforereceive', this.onMessage, this)
-      this.Style({
-        '.extplug-strike': { 'text-decoration': 'line-through' }
-      })
+    style: {
+      '.extplug-strike': { 'text-decoration': 'line-through' }
     },
 
-    disable() {
-      Events.off('chat:beforereceive', this.onMessage)
+    enable() {
+      this.listenTo(Events, 'chat:beforereceive', this.onMessage)
     },
 
     onMessage(msg) {
