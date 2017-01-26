@@ -13,9 +13,24 @@
     "extplug-plugin"
   ],
   "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-register": "^6.22.0",
     "extplug-cli": "^1.0.0"
   },
   "scripts": {
-    "build": "extplug bundle src/main.js build/chat-markup.js"
+    "build": "extplug bundle src/main.js build/chat-markup.js",
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "src/*.js"
+    ],
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
