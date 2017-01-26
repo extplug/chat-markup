@@ -1,6 +1,6 @@
 {
   "name": "extplug-chat-markup",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "ExtPlug plugin that applies some markdown/slack/reddit-like markup to chat messages.",
   "repository": "extplug/chat-markup",
