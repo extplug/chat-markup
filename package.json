@@ -9,7 +9,7 @@
   "devDependencies": {
     "deps": "^1.2.0",
     "gulp": "^3.8.11",
-    "gulp-babel": "^5.1.0",
+    "gulp-babel": "^6.1.2",
     "mkdirp": "^0.5.1",
     "requirejs": "^2.1.18",
     "run-sequence": "^1.1.1"
