@@ -44,12 +44,19 @@ https://extplug.github.io/chat-markup/build/chat-markup.js;extplug/chat-markup/m
 
 **Note: this section is intended for developers only.**
 
-This plugin uses NPM for dependency management and `gulp` for building.
+First, install dependencies:
 
-```
+```bash
 npm install
-gulp build
 ```
+
+Then, use:
+
+```bash
+npm run build
+```
+
+The plugin will be built using the [ExtPlug CLI](https://github.com/extplug/extplug-cli).
 
 The built plugin will be stored at `build/chat-markup.js`.
 
