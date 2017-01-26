@@ -1,6 +1,8 @@
 Chat Markup
 ===========
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/extplug/chat-markup.svg)](https://greenkeeper.io/)
+
 Applies some markdown/slack/reddit-like markup to chat messages.
 
 ![Screenshot](http://i.imgur.com/GWMlDyw.png)
